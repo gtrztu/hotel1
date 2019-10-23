@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EDB635C5-B3DA-CA11-ED1E-F1EE5DB09E0D" containerWithKeyObject="B90E5CAC-D732-70F2-854C-244C6A781584" localFKIndex="FB8F1F1A-398F-E742-CC8F-85A8B3D6D5FC" name="Reservation_TypePaket_FK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-16 18:55:38 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<referredTableLongName>TypePaket</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CB5CDBAD-2417-7262-133B-D00DD71B8948</referredTableID>
+<keyObject>FF9C080A-E06A-DD44-5F7A-D56BD28DE2AF</keyObject>
+<referredKeyID>FF9C080A-E06A-DD44-5F7A-D56BD28DE2AF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_typepaket</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

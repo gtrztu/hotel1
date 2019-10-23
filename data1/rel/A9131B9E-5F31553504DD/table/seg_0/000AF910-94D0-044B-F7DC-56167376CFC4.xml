@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="000AF910-94D0-044B-F7DC-56167376CFC4" name="HotelServices">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:11:04 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Service" id="3FD53138-4D2D-1995-565E-067F9905D3EB">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:13:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TypeService" id="D434F63C-B158-A89F-8E7D-CA1C1EE60DFF">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:13:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="19E9021A-0A52-F806-FEA4-8BAF7F32B911" name="HotelServices_PK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:13:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FD53138-4D2D-1995-565E-067F9905D3EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

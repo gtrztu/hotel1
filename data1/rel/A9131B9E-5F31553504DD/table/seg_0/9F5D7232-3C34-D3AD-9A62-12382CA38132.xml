@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9F5D7232-3C34-D3AD-9A62-12382CA38132" name="Client">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:31:45 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_client" id="F4201322-B1A6-2F42-7AF0-1C62F77A6DD4">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="firstName" id="4A6DE67A-58C4-7D30-20C8-8CD502F71BC1">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="laastName" id="DC7D4F2D-3087-ECBE-B7BC-C83D7E9CE2FD">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="addres" id="82875A7B-9ECE-6BF6-DF67-764205095EE4">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="8D0B5E69-C607-1CD4-D088-85C753A40FFB">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="age" id="F3DA51E2-31BB-EB52-CB14-979E1BFB715C">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reiting" id="63C2EBE8-4B23-F49C-0EBD-D68AFAA0F1B2">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hotel_id_hotel" id="4E42E65C-999C-A990-E536-FBECCBD619CE">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:14:49 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F31890F-82E9-2BF9-3E52-C2E13A462AC9" referredColumn="165CC5B8-97D8-6B4F-33DE-856A3B92BB9C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C70C36EE-93F9-EF26-8251-BDD217E057CB" name="Client_PK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:35:14 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4201322-B1A6-2F42-7AF0-1C62F77A6DD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55432106-D801-CC85-10F1-555F71CE5F80" name="Client_Hotel_FK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:14:49 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E42E65C-999C-A990-E536-FBECCBD619CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

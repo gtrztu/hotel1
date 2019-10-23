@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="51B76EAD-3094-32DC-4CA0-0FF390769A83" name="Login">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:45:00 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_log" id="450A07D0-D198-838E-BC69-C16417CA007D">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:47:37 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fname" id="5E8810DB-9F66-36AC-F77E-0C803A6BA6C8">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:47:37 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lname" id="B01070C0-5E38-8776-C2A2-20A37B3E69AC">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:47:37 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="3DDC334F-A65C-ECBB-B586-D6A61563F09B">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:47:37 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="number" id="38441DEE-070D-DAA1-DEB7-CF22A3DC2C29">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:47:37 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hotel_id_hotel" id="CC24AFC1-15EE-323B-9685-E6E7482D1F7D">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 21:04:08 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83F3E6F0-E475-5FE5-482F-FB35BF4FA245" referredColumn="165CC5B8-97D8-6B4F-33DE-856A3B92BB9C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B5D3CD0-A39D-54D6-EEBC-0A8CC5462662" name="Login_PK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:47:37 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="450A07D0-D198-838E-BC69-C16417CA007D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1281B32-6D22-7BCC-7FE1-1A51D4BAFA2A" name="Login_Hotel_FK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 21:04:08 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC24AFC1-15EE-323B-9685-E6E7482D1F7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

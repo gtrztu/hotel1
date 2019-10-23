@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9508D1EC-8386-F0D2-06C5-35CC62AC0471" name="Recepcionist">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:52:33 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_recep" id="8A7D5641-8381-B658-133C-B12F4766F666">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:56:58 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nFname" id="978AA14F-A9A5-17B5-6C25-9FBBCDDF8F0F">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:56:58 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nLname" id="ADF8CDD8-83D0-6D94-C8DB-3991E004E535">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:56:58 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="npassword" id="0ABDD03D-72AA-428E-9725-AA3BD7E4F75B">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:56:58 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reservation_id_rezervacion" id="1B2F47F6-7F96-787A-1229-A7DE335DA9DD">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 21:04:35 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFC41B77-5CD4-19C6-0C18-28CC8B9F145E" referredColumn="71993C2D-B64A-8685-0023-5ED58EB7DCB2"/>
+</associations>
+</Column>
+<Column name="Hotel_id_hotel" id="E594EF28-5F7B-328B-4EB4-BD88C9004BA4">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:15:38 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C5FE35C-9B83-B961-B3A9-16A6CCBE3BE7" referredColumn="165CC5B8-97D8-6B4F-33DE-856A3B92BB9C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="399C1DE0-CD14-712C-376D-D21BE6EFF208" name="Recepcionist_PK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 20:56:58 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A7D5641-8381-B658-133C-B12F4766F666"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="42510968-31C8-9082-B664-B7B3B8343009" name="Recepcionist_Reservation_FK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-13 21:04:35 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B2F47F6-7F96-787A-1229-A7DE335DA9DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21D288F0-F246-D0A9-B298-82DC490B1C4C" name="Recepcionist_Hotel_FK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-15 20:15:38 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E594EF28-5F7B-328B-4EB4-BD88C9004BA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

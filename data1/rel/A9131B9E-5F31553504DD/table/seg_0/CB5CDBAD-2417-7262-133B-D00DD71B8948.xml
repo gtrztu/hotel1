@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB5CDBAD-2417-7262-133B-D00DD71B8948" name="TypePaket">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-16 18:54:13 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_typepaket" id="A97C50A2-94A4-21EE-1CD0-8B8F79ECE649">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-16 18:55:09 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="typepaket" id="EC5518B0-21FB-7A41-1639-1739E374CC32">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-16 18:55:09 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF9C080A-E06A-DD44-5F7A-D56BD28DE2AF" name="TypePaket_PK">
+<createdBy>Tolga</createdBy>
+<createdTime>2019-10-16 18:55:34 UTC</createdTime>
+<ownerDesignName>data1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A97C50A2-94A4-21EE-1CD0-8B8F79ECE649"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
