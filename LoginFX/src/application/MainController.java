@@ -13,8 +13,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-
-
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,7 +36,8 @@ private TextField txtusername;
 private TextField txtpassword;
 @FXML
 private Button closeButton;
-
+@FXML
+private Button LoginButton;
 @FXML
 private TextField uPass;
 @FXML
@@ -82,10 +82,12 @@ Session session=factory.getCurrentSession();
 		try {		
 			String us=txtusername.getText();
 			String password=txtpassword.getText();
+			
 			session.beginTransaction();
 			String[] names=us.split("\\s+");
 			List<Login> theHotels = session.createQuery("from Login").getResultList();		
 			System.out.println(us);
+			
 			theHotels = session.createQuery("from Login s where Fname ="+"'"+names[0]+"'"+"and lname="+"'"+names[1]+"'"+"and passwordl="+"'"+password+"'").getResultList();
 			
 			Login log = theHotels.get(0);
@@ -93,8 +95,7 @@ Session session=factory.getCurrentSession();
 	
 
 			session.getTransaction().commit();
-
-	
+		
 	
 	
 	// javafX window for login if credentials are met 
@@ -108,6 +109,9 @@ Session session=factory.getCurrentSession();
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
+		//primaryStage.setOnCloseRequest(e -> Platform.exit());
+	//	Stage primarystage = (Stage) LoginButton.getScene().getWindow();
+	//	primarystage.close();
 
 	} 
 	
@@ -148,9 +152,11 @@ Session session=factory.getCurrentSession();
 		lblStatus.setText("Login Failed");
 	}
 		
+		
+			
 		}
-
 		finally {
+			
 			factory.close();
 		}
 	

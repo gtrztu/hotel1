@@ -30,18 +30,22 @@ public class Login {
 	@Column(name="Hotel_id_hotel")
 	private int hotel_id_hotel;
 	
+	@Column(name="username")
+	private String username;
+	
 	public Login() {
 		
 	}
 
 
 
-	public Login(String fname, String lname, String password, int number1, int hotel_id_hotel) {
+	public Login(String fname, String lname, String password, int number1, int hotel_id_hotel , String username) {
 		this.fname = fname;
 		this.lname = lname;
 		this.password = password;
 		this.number1 = number1;
 		this.hotel_id_hotel = hotel_id_hotel;
+		this.username=username;
 	}
 
 
@@ -94,11 +98,26 @@ public class Login {
 		this.hotel_id_hotel = hotel_id_hotel;
 	}
 
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "Login [id_log=" + id_log + ", fname=" + fname + ", lname=" + lname + ", password=" + password
-				+ ", number=" + number1 + ", hotel_id_hotel=" + hotel_id_hotel + "]";
+				+ ", number1=" + number1 + ", hotel_id_hotel=" + hotel_id_hotel + ", username=" + username + "]";
 	}
+
 
 
 
