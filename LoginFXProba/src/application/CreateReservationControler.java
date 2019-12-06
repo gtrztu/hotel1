@@ -1,14 +1,18 @@
 package application;
 
 import java.net.URL;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
 import client.entity.Client;
-import hotel.entity.Hotel;
 import hotelservice.entity.Hotelservice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,22 +22,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import login.entity.Login;
 import reservation.entity.Reservation;
 import room.entity.Room;
 import typepaket.entity.TypePaket;
 
-public class ReceptionistControler implements Initializable {
-	@FXML
-	private TextField uNameC;
-	@FXML
-	private TextField uFamalyC;
-	@FXML
-	private TextField PhoneC;
-	@FXML
-	private TextField AddresC;
-	@FXML
-	private TextField AgeC;
+public class CreateReservationControler implements Initializable{
 	@FXML
 	private Button closeButton;
 	@FXML
@@ -46,41 +39,35 @@ public class ReceptionistControler implements Initializable {
 	private DatePicker Datebegin;
 	@FXML
 	private DatePicker Dateend;
+	@FXML
+	private TextField PhoneC;
 	
-	public void createClient() {
-		String userC=uNameC.getText();
-		String famalyC=uFamalyC.getText();
-		String phoneC=PhoneC.getText();
-		String addresC=AddresC.getText();
-		
-		int ageC=0;
-		if(AgeC.getText().trim().isEmpty()==false)
-		ageC=Integer.parseInt(AgeC.getText());
-		
-		String hotelRoomType=comboboxRoomType.getValue();
-		
-		int hotelRoomNumber=0;
-		if(comboboxRoomNumber.getValue().trim().isEmpty()==false)
-		hotelRoomNumber=Integer.parseInt(comboboxRoomNumber.getValue());
-		
-		String hotelServiceType=comboboxServiceType.getValue();
-		LocalDate datebegin=Datebegin.getValue();
-		LocalDate dateend=Dateend.getValue();
-		
-		if(uNameC.getText().trim().isEmpty()==false && uFamalyC.getText().trim().isEmpty()==false && PhoneC.getText().trim().isEmpty()==false && AddresC.getText().trim().isEmpty()==false && AgeC.getText().trim().isEmpty()==false) {
-			SessionFactory factory=new Configuration()
-					.configure("hibernate.cfg.xml")
-					.addAnnotatedClass(Client.class)
-					.addAnnotatedClass(Reservation.class)
-					.addAnnotatedClass(Room.class)
-					.addAnnotatedClass(TypePaket.class)
-					.addAnnotatedClass(Hotelservice.class)
-					.buildSessionFactory();
+	public void createReservation() {
+		String clientPhone = PhoneC.getText();
+		String hotelRoomType = comboboxRoomType.getValue();
 
+		int hotelRoomNumber = 0;
+		if (comboboxRoomNumber.getValue().trim().isEmpty() == false)
+			hotelRoomNumber = Integer.parseInt(comboboxRoomNumber.getValue());
+
+		String hotelServiceType = comboboxServiceType.getValue();
+		LocalDate datebegin = Datebegin.getValue();
+		LocalDate dateend = Dateend.getValue();
 		
-			
+		
+		
+	
+		SessionFactory factory=new Configuration()
+				.configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Client.class)
+				.addAnnotatedClass(Reservation.class)
+				.addAnnotatedClass(Room.class)
+				.addAnnotatedClass(TypePaket.class)
+				.addAnnotatedClass(Hotelservice.class)
+				.buildSessionFactory();
+		
 		Session session=factory.getCurrentSession();
-
+		
 		try {
 		
 
@@ -88,6 +75,40 @@ public class ReceptionistControler implements Initializable {
 		
 		
 		session.beginTransaction();
+		
+		/*DateTimeFormatter sdf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate date1 = LocalDate.of(2009, 9, 10);
+        LocalDate date2 = LocalDate.of(2009, 4, 10);
+		
+		
+			List<Hotelservice> theService = session.createQuery("from Hotelservice").getResultList();
+
+			theService = session.createQuery("from Hotelservice ").getResultList();
+			Hotelservice Service = new Hotelservice();
+
+			//for (int i = 0; i < theService.size(); i++) {
+				//Service = theService.get(i);
+				
+				if(datebeginService.getMonth().compareTo(date1.getMonth())>=0 && datebeginService.getMonth().compareTo(date2.getMonth())<=0) {
+				Service = theService.get(1);
+				comboboxServiceType.getItems().add(Service.getTypeservice());
+				}
+				else {
+					Service = theService.get(0);
+				comboboxServiceType.getItems().add(Service.getTypeservice());
+				System.out.println(Service.getTypeservice());
+				}
+		*/
+		
+		
+		
+		
+		
+			List<Client> theClientPhone = session.createQuery("from Client").getResultList();
+
+			theClientPhone = session.createQuery("from Client s where phone =" + "'" + clientPhone + "'").getResultList();
+			Client ChosenClientId = theClientPhone.get(0);
+		
 		
 				List<TypePaket> theTypePaket = session.createQuery("from TypePaket").getResultList();
 
@@ -103,40 +124,22 @@ public class ReceptionistControler implements Initializable {
 
 				theHotelservice = session.createQuery("from Hotelservice s where typeservice =" + "'" + hotelServiceType + "'").getResultList();
 				Hotelservice ChosenHotelservice = theHotelservice.get(0);
+				
+				Reservation CreateReservation=new Reservation(datebegin,dateend,ChosenClientId.getId_client(),ChosenHotelservice.getId_service(),ChosenTypePaket.getId_typepaket(),MainController.logid);
 		
-		
-		
-		Client CreateClient=new Client(userC,famalyC,addresC,phoneC,ageC,0,1);
-		
-		session.save(CreateClient);
-		session.getTransaction().commit();
-		
-	
-		Session session6 = factory.openSession();
-		
-		session6.getTransaction().begin();
-		
-		Reservation CreateReservation=new Reservation(datebegin,dateend,CreateClient.getId_client(),ChosenHotelservice.getId_service(),ChosenTypePaket.getId_typepaket(),83);
-		System.out.println("Saving new Client..");
-		
-		session6.save(CreateReservation);
-		session6.getTransaction().commit();
-		System.out.println("Done!!!");
-		
-		
-
+				session.save(CreateReservation);
+				session.getTransaction().commit();
 		}
 
 		finally {
 			
 		factory.close();
 		}
-		}
-		else
-		{
-		 System.out.println("Erro");
-		}
-		}
+		
+		
+	}
+	
+	
 	
 	public void cancel (ActionEvent actionEvent) {
 		Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -144,8 +147,15 @@ public class ReceptionistControler implements Initializable {
 		    
 	}
 
+
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		LocalDate datebeginService = Datebegin.getValue();
+		LocalDate dateendService = Dateend.getValue();
+		
+		
+		
 		SessionFactory factory=new Configuration()
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Room.class)
@@ -165,8 +175,9 @@ public class ReceptionistControler implements Initializable {
 	   
 		for (int i=0; i<theRooms.size();i++) {
 			roomnumber = theRooms.get(i);
-		
+		if(roomnumber.getStatus()==true) {
 		comboboxRoomNumber.getItems().add(roomnumber.getRoomnumber());
+		}
 		
 		System.out.println(roomnumber.getRoomnumber());
 
@@ -189,17 +200,28 @@ public class ReceptionistControler implements Initializable {
 		
 		}
 		
+		//DateTimeFormatter sdf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+      //  LocalDate date1 = LocalDate.of(2009, 9, 10);
+       // LocalDate date2 = LocalDate.of(2009, 4, 10);
+		
+		
 			List<Hotelservice> theService = session.createQuery("from Hotelservice").getResultList();
 
-			thePaket = session.createQuery("from Hotelservice ").getResultList();
+			theService = session.createQuery("from Hotelservice ").getResultList();
 			Hotelservice Service = new Hotelservice();
 
 			for (int i = 0; i < theService.size(); i++) {
 				Service = theService.get(i);
-
+			
+				//if(datebeginService.getMonth().compareTo(date1.getMonth())>=0 && datebeginService.getMonth().compareTo(date2.getMonth())<=0) {
+				//Service = theService.get(1);
+				//comboboxServiceType.getItems().add(Service.getTypeservice());
+				//}
+				//else {
+				//	Service = theService.get(0);
 				comboboxServiceType.getItems().add(Service.getTypeservice());
-
 				System.out.println(Service.getTypeservice());
+				//}
 
 			}
 			
@@ -210,5 +232,4 @@ public class ReceptionistControler implements Initializable {
 		}
 		
 	}
-	
 }
