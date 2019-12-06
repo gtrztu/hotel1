@@ -20,7 +20,8 @@ import javafx.stage.Stage;
 
 public class MainController  {
 	
-	
+	static int logid=0;
+	static int hotelid=0;
 	
 @FXML
 private Label lblStatus;
@@ -40,6 +41,9 @@ private Button LoginButton;
 
 
 public void Login(ActionEvent Event) throws Exception {
+	
+	
+	
 	SessionFactory factory=new Configuration()
 			.configure("hibernate.cfg.xml")
 			.addAnnotatedClass(Login.class)
@@ -60,8 +64,11 @@ Session session=factory.getCurrentSession();
 			theHotels = session.createQuery("from Login s where username ="+"'"+us+"'"+"and passwordl="+"'"+password+"'").getResultList();
 			
 			Login log = theHotels.get(0);
+			
+		logid=log.getId_log();
+		hotelid=log.getHotel_id_hotel();
 			System.out.println(log.getId_log());
-	
+			System.out.println(logid);
 
 			session.getTransaction().commit();
 		
@@ -112,8 +119,8 @@ Session session=factory.getCurrentSession();
 	{
 		lblStatus.setText("Login Success");
 		Stage primaryStage=new Stage();
-		Parent root = FXMLLoader.load(getClass().getResource("/application/receptionist.fxml"));
-		Scene scene = new Scene(root,625,470);
+		Parent root = FXMLLoader.load(getClass().getResource("/application/ReceptionistMain.fxml"));
+		Scene scene = new Scene(root,205,350);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();

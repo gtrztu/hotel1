@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RecepcionistCreateClientControler">
+   <children>
+      <Button fx:id="closeButton" layoutX="222.0" layoutY="269.0" mnemonicParsing="false" onAction="#cancel" prefHeight="33.0" prefWidth="89.0" text="Cancel" />
+      <Label layoutX="103.0" layoutY="14.0" text="Create Client">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="40.0" layoutY="269.0" mnemonicParsing="false" onAction="#createClient" prefHeight="33.0" prefWidth="171.0" text="Create Client" />
+      <TextField fx:id="uNameC" layoutX="103.0" layoutY="60.0" />
+      <TextField fx:id="uFamalyC" layoutX="103.0" layoutY="97.0" />
+      <TextField fx:id="PhoneC" layoutX="103.0" layoutY="135.0" />
+      <TextField fx:id="AddresC" layoutX="103.0" layoutY="170.0" />
+      <Label layoutX="58.0" layoutY="64.0" text="Name:" />
+      <Label layoutX="57.0" layoutY="102.0" text="Family:" />
+      <Label layoutX="57.0" layoutY="139.0" text="Phone:" />
+      <Label layoutX="47.0" layoutY="174.0" text="Address:" />
+      <Label layoutX="72.0" layoutY="208.0" text="Age:" />
+      <TextField fx:id="AgeC" layoutX="103.0" layoutY="206.0" />
+      <Label fx:id="lblStatus" layoutX="65.0" layoutY="302.0" text="Status:" />
+   </children>
+</Pane>

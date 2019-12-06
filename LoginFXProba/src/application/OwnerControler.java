@@ -18,7 +18,7 @@ public class OwnerControler  {
 	
 	@FXML
 	private Button closeButton;
-	@FXML
+	
 
 	
 	public void FormcreateNewMeneger() throws Exception {
